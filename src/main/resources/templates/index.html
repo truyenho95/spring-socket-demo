@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <title>Spring Boot WebSocket!</title>
+    <link rel="stylesheet" th:href="@{/resources/static/bootstrap.min.css}">
+    <script th:src="@{/resources/static/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/resources/static/sockjs.min.js}"></script>
+    <script th:src="@{/resources/static/stomp.min.js}"></script>
+    <script th:src="@{/resources/static/app.js}"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="button" value="love">
+                    <input type="button" value="haha">
+                    <input type="button" value="wow">
+                    <input type="button" value="sad">
+                    <input type="button" value="angry">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped" id="conversation">
+                <thead>
+                <tr>
+                    <th>Greetings</th>
+                </tr>
+                </thead>
+                <tbody id="hellos">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
